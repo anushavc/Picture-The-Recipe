@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Picture the Recipe</title>
+    <link rel="icon" href="{% static "assets/img/picicon.png" %}"/>
+    <link rel="stylesheet" href={% static "assets/bootstrap/css/bootstrap.min.css" %}>
+    <link rel="stylesheet" href={% static "assets/fonts/ionicons.min.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/gradient-navbar-1.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/gradient-navbar.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/Login-Form-Clean.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/Navigation-with-Button.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/styles.css" %}>
+    
+    
+</head>
+
+<body style="background:#E7E8EA;">
+    <div style="position: absolute;
+    top: 40%;
+    left: 40%;
+    margin-top: -10%;
+    margin-left: -15%;
+    width: 50%;
+    height: 500px;background:rgb(203,58,49,0.21);text-align:center">
+    <img style="padding:40px;" src="{% static "assets/img/fileerror.png" %}" alt="">
+    <h1>File not uploaded</h1>
+    <h2>Please upload only .PNG format</h2>
+    <button id="btn1"><a style="text-decoration: none; color:black" href="{% url 'home' %}">Go Back</a></button>
+    
+    </div>
+    <script src={% static "assets/js/jquery.min.js" %}></script>
+    <script src={% static "assets/bootstrap/js/bootstrap.min.js" %}></script>
+</body>
+
+</html>

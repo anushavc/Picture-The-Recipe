@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Picture the Recipe</title>
+    <link rel="icon" href="{% static "assets/img/picicon.png" %}"/>
+    <link rel="stylesheet" href={% static "assets/bootstrap/css/bootstrap.min.css" %}>
+    <link rel="stylesheet" href={% static "assets/fonts/ionicons.min.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/gradient-navbar-1.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/gradient-navbar.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/Login-Form-Clean.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/Navigation-with-Button.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/styles.css" %}>
+    <style>
+        .imgbtn {padding:100%;} ;
+    </style>
+    
+</head>
+
+<body style="background:#E7E8EA;">
+
+    <!--navbar-->
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+        <div class="container"><a class="navbar-brand" href="">Picture the Recipe</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav mr-auto"></ul>
+                <span class="navbar-text actions" > <a class="login" href="{% url 'home' %}" style="background-color: #1B271B;color:white;border-color:white;border: raduis 10px;">Home</a><a class="btn btn-light action-button" role="button" href="/upload" style="background-color: #1B271B;color:white;border-color:white">New Image</a></span></div>
+        </div>
+    </nav>
+
+    <!--landing page-->
+    <div style="height:85vh">
+    <div class="row" style="height:60vh">
+        <div class="col-sm-6 col-md-6 col-lg-6 align-items-center">
+            <div class="row " >
+                <h1>Fell in love with a dish but unable to find the recipe?</h1>
+            </div>
+            
+            <div class="row">
+                <h1>Find your <span style="color:#84BE6A">recipe</span> online in <span style="color:#84BE6A">30 seconds</span></h1>
+            </div>
+            <div class="row" style=" align-items: center;
+            display: flex;
+            justify-content: center;">
+                <a href="{% url 'upload' %}"><img src="{% static "assets/img/try_btn.png" %}" alt=""></a>
+            </div>
+        </div>
+        <div class="col-sm-6 ol-md-6 col-lg-6 align-items-center" style="justify-content: center; text-align:center"> <img src="{% static "assets/img/main_dish.png" %}" alt=""></div>
+     </div>
+     <div class=" col-sm-12 col-md-12 col-lg-12" style=" align-items: center;
+     display: flex;justify-content: center;">
+    
+    </div>
+</div>
+    
+
+    <!-- about page -->
+    <div class="row" style="height:90vh;padding:0px;margin:0px;font-size:20px">
+        <div class="col-sm-6 ol-md-6 col-lg-6 align-items-center"> <img src="{% static "assets/img/aboutimg.png" %}" alt=""></div>
+
+        <div class="col-sm-6 ol-md-6 col-lg-6 align-items-center" >
+            <h1>Our Mission</h1>
+            <br>
+            <p>It all started with the passion for travelling and exploring other cuisines. But, we often felt dejected when we couldn’t learn the names of the dishes we had fallen in love with.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem distinctio dolor, suscipit quibusdam porro illum maiores repellat debitis similique? Quam a molestias eveniet libero laboriosam adipisci doloribus expedita doloremque non minima labore rem saepe praesentium, velit illo impedit ipsa nulla laudantium sint provident dignissimos quos exercitationem error? Facere nam ipsa, ipsam porro repellendus quae tenetur nesciunt pariatur ab voluptatem exercitationem optio distinctio. Nobis voluptatibus excepturi quae atque blanditiis a deserunt!</p>
+            <p>Hence, we created <span style="color: #84b36a">Picture the Recipe</span></p>
+             <p>The genre defining application where you can find the name, recipe, nutrition tags and allergy risks of a certain any dish.     With a single step, we’re here to provide you all that you need to know about a dish.</p>
+
+        </div>
+    </div>
+    <script src={% static "assets/js/jquery.min.js" %}></script>
+    <script src={% static "assets/bootstrap/js/bootstrap.min.js" %}></script>
+
+    <!--footer-->
+    <section id="lab_social_icon_footer" style="background: black;">
+        <!-- Include Font Awesome Stylesheet in Header -->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <div class="container">
+                <div class="text-center center-block">
+                        <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                        <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                        <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                        <a href="mailto:#"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
+        </div>
+        </section>
+</body>
+</html>

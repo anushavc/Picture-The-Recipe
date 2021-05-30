@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Picture the Recipe</title>
+    <link rel="icon" href="{% static "assets/img/picicon.png" %}"/>
+    <link rel="stylesheet" href={% static "assets/bootstrap/css/bootstrap.min.css" %}>
+    <link rel="stylesheet" href={% static "assets/fonts/ionicons.min.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/gradient-navbar-1.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/gradient-navbar.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/Login-Form-Clean.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/Navigation-with-Button.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/styles.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/Highlight-Phone.css" %}>
+    
+</head>
+
+<body  style="background:#E7E8EA;">
+    {% if img_obj %}
+  <h3>Succesfully uploaded : {{img_obj.title}}</h3>
+  <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+{% endif %}
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+        <div class="container"><a class="navbar-brand" href="">Picture the Recipe</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav mr-auto"></ul>
+                <span class="navbar-text actions" > <a class="login" href="{% url 'home' %}" style="background-color: #1B271B;color:white;border-color:white;border: raduis 10px;">Home</a><a class="btn btn-light action-button" role="button" href="/upload" style="background-color: #1B271B;color:white;border-color:white">New Image</a></span></div>
+        </div>
+    </nav>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="intro">
+                        <h2>{{header}}</h2></div>
+                        <br>
+                        <h4><i>{{description}}</i></h4>
+                        <br>
+                        <h4>Ingredients</h4>
+                        <ul style="list-style-type:none"><p>
+                        {% for i in ingri%}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </p></ul>
+                        <br>
+                        <h4>Nutrition Information</h4>
+                        <ul style="list-style-type:none">
+                        {% for i in nutri %}
+                            <li> {{i}}</li>
+                        {% endfor %}
+                        </ul>
+                        <h4>Method</h4>
+                        <p><ul>
+                            {% for i in steps %}
+                            <li>{{i}}</li>
+                        {% endfor %}
+                        </ul></p>
+
+                </div>
+                <div class="col-sm-4">
+                    <br>
+                    <img class="img-fluid text-align-center" style="justify-content: center;" src="{{imager}}" >
+                </div>
+                <div class="col">
+                    <div class="row"><img  onclick="display()" class="img-fluid text-align-center" style="justify-content: center;" src="{% static "assets/img/group.png" %}" >
+                 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src={% static "assets/js/jquery.min.js" %}></script>
+    <script src={% static "assets/bootstrap/js/bootstrap.min.js" %}></script>
+ 
+    <script>
+        function display() {
+           window.print();
+        }
+     </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Picture the Recipe</title>
+    <link rel="icon" href="{% static "assets/img/picicon.png" %}"/>
+    <link rel="stylesheet" href={% static "assets/bootstrap/css/bootstrap.min.css" %}>
+    <link rel="stylesheet" href={% static "assets/fonts/ionicons.min.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/gradient-navbar-1.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/gradient-navbar.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/Login-Form-Clean.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/Navigation-with-Button.css" %}>
+    <link rel="stylesheet" href={% static "assets/css/styles.css" %}>
+    
+    
+</head>
+<style>
+    #myProgress {
+      width: 100%;
+      background-color: #ddd;
+    }
+    
+    #myBar {
+      width: 1%;
+      height: 30px;
+      background-color: #84b36a;
+      border-radius:20px;
+    }
+    </style>
+
+<body style="background:#E7E8EA;" onload="move()">
+    <div style="position: absolute;
+    top: 50%;
+    left: 40%;
+    margin-top: -10%;
+    margin-left: -15%;
+    width: 50%;
+    height: 500px;text-align:center">
+    <h1>Translating</h1>
+    <br>
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+    
+    </div>
+    <script>
+        var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 20);
+    function frame() {
+      if (width > 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        console.log(width)
+        elem.style.width = width + "%";
+      }
+      if(width==100)
+      {window.location.href = "/searchresults";}
+    
+    }
+      
+  }
+}
+    </script>
+    <script src={% static "assets/js/jquery.min.js" %}></script>
+    <script src={% static "assets/bootstrap/js/bootstrap.min.js" %}></script>
+</body>
+
+</html>
